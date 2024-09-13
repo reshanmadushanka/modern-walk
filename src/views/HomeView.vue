@@ -15,12 +15,12 @@
           <div class="row">
             <Card
               v-for="product in carouselItems"
-              :key="product.id"
-              :title="product.title"
-              :image="product.image"
-              :price="product.price"
-              :descriotion="product.description"
-              :background-color="getBackgroundColor(product.category)"
+              :key="product?.id"
+              :title="product?.title"
+              :image="product?.image"
+              :price="product?.price"
+              :description="product?.description"
+              :background-color="getBackgroundColor(product?.category)"
             />
           </div>
         </div>
@@ -79,7 +79,7 @@ const getBackgroundColor = (category: string) => {
 
 onMounted(async () => {
   try {
-    products.value = await ProductService.getFilteredProducts() // Fetch products from the service
+    products.value = await ProductService.getLimitedProducts(20, 'desc') // Fetch products from the service
   } catch (error) {
     console.error('Error loading products:', error)
   }

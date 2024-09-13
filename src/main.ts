@@ -2,9 +2,9 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
-import '@fontsource/roboto' // Defaults to weight 400
-import '@fontsource/roboto/400.css' // Specify weight
-import '@fontsource/roboto/400-italic.css' // Specify weight and style
+import '@fontsource/roboto'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/400-italic.css'
 import './assets/main.css'
 
 import App from './App.vue'

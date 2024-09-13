@@ -3,7 +3,7 @@
     <div class="heading">
       <Heading level="1" size="xl" color="black">Modern Walk</Heading>
     </div>
-    <h2>{{ category }}</h2>
+    <h3 class="product-category">{{ category }}</h3>
     <div class="row">
       <Card
         v-for="product in products"
@@ -24,7 +24,6 @@ import Heading from '@/components/Heading.vue'
 import Card from '@/components/Card.vue'
 import ProductService from '@/services/ProductService'
 
-// Accept the category as a prop
 const props = defineProps<{ category: string }>()
 
 const products = ref([])
@@ -42,7 +41,6 @@ const getBackgroundColor = (category: string) => {
 
 const loadProducts = async () => {
   try {
-    // Fetch products filtered by category
     products.value = await ProductService.getFilteredProductsByCategory(props.category, 'desc')
   } catch (error) {
     console.error('Error loading products:', error)
@@ -51,3 +49,11 @@ const loadProducts = async () => {
 
 onMounted(loadProducts)
 </script>
+
+<style>
+.product-category {
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 25px;
+}
+</style>

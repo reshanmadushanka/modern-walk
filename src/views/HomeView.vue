@@ -2,8 +2,9 @@
   <div class="container">
     <div class="heading">
       <Heading level="1" size="xl" color="black">Modern Walk</Heading>
+      <hr />
     </div>
-    <h2 class="mb-5 home-title">Flash Sale</h2>
+    <h2 class="mb-5 mt-5 home-title">Flash Sale</h2>
     <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <!-- products flash -->
@@ -120,7 +121,7 @@ const groupedProducts = computed(() => {
 
 .home-title {
   font-weight: bold;
-  font-size: 25px;
-  margin-top: 10px;
+  font-size: 20px;
+  margin-top: 15px;
 }
 </style>

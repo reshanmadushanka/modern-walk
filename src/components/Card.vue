@@ -9,7 +9,7 @@
       >
         <h5 class="card-title price-text">Rs {{ price }}</h5>
         <p class="card-text">
-          {{ descriotion.substring(0, 100) + '...' }}
+          {{ description.substring(0, 100) + '...' }}
         </p>
       </div>
     </div>
@@ -23,7 +23,7 @@ const props = defineProps<{
   image?: string
   title?: string
   price?: number
-  descriotion?: string
+  description?: string
   link?: string
   backgroundColor?: string
 }>()
@@ -31,7 +31,7 @@ const props = defineProps<{
 const cardWidth = props.cardWidth
 const title = props.title
 const image = props.image
-const descriotion = props.descriotion
+const description = props.description
 const price = props.price
 const backgroundColor = props.backgroundColor
 </script>

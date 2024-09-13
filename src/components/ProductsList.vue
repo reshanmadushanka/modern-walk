@@ -2,6 +2,7 @@
   <div class="container">
     <div class="heading">
       <Heading level="1" size="xl" color="black">Modern Walk</Heading>
+      <hr />
     </div>
     <h3 class="product-category">{{ category }}</h3>
     <div class="row">
@@ -55,5 +56,6 @@ onMounted(loadProducts)
   text-transform: capitalize;
   font-weight: bold;
   padding: 25px;
+  font-size: 20px;
 }
 </style>

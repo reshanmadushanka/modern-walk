@@ -17,7 +17,7 @@ const headingClass = `text-${props.size || 'lg'} text-${props.color || 'dark'}`
 
 <style scoped>
 .heading-style {
-  line-height: 175px;
+  line-height: 70px;
   font-weight: 700;
 }
 </style>

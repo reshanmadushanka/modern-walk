@@ -1,9 +1,11 @@
 <template>
   <div class="container">
-    <div class="heading">
-      <Heading level="1" size="xl" color="black">Modern Walk</Heading>
-      <hr />
-    </div>
+    <router-link :to="{ name: 'home' }" class="home-to-link">
+      <div class="heading">
+        <Heading level="1" size="xl" color="black">Modern Walk</Heading>
+        <hr />
+      </div>
+    </router-link>
     <h3 class="product-category">{{ category }}</h3>
     <div class="row">
       <Card
@@ -57,5 +59,8 @@ onMounted(loadProducts)
   font-weight: bold;
   padding: 25px;
   font-size: 20px;
+}
+.home-to-link {
+  text-decoration: none;
 }
 </style>

@@ -3,7 +3,7 @@
     <div class="heading">
       <Heading level="1" size="xl" color="black">Modern Walk</Heading>
     </div>
-    <h2>Flash Sale</h2>
+    <h2 class="mb-5 home-title">Flash Sale</h2>
     <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <!-- products flash -->
@@ -44,13 +44,14 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <div class="row h-100">
+    <h2 class="mt-4 mb-2 home-title">Categories</h2>
+    <div class="row">
       <!-- Left Rectangle -->
-      <RouterLink to="/mens-clothing" class="col-md-6 half-rectangle left-rectangle"
+      <RouterLink to="/mens-clothing" class="col half-rectangle left-rectangle mens-box"
         >Men's Clothing</RouterLink
       >
       <!-- Right Rectangle -->
-      <RouterLink to="/womens-clothing" class="col-md-6 half-rectangle right-rectangle"
+      <RouterLink to="/womens-clothing" class="col half-rectangle right-rectangle"
         >Women's Clothing</RouterLink
       >
     </div>
@@ -58,7 +59,7 @@
 </template>
 
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink } from 'vue-router'
 import { ref, onMounted, computed } from 'vue'
 import ProductService, { Product } from '@/services/ProductService'
 import Heading from '@/components/Heading.vue'
@@ -97,18 +98,29 @@ const groupedProducts = computed(() => {
 
 <style scoped>
 .half-rectangle {
-  height: 100vh; /* Full height */
-  border-radius: 15px;
+  height: 300px; /* Full height */
+  border-radius: 25px;
   display: flex;
+  margin: 15px 15px 50px 15px;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
 }
 .left-rectangle {
-  background-color: #2bd9af; /* Orange */
+  background-color: #2bd9af;
+  box-shadow: 10px 15px 20px 0px #00000026;
 }
 .right-rectangle {
-  background-color: #ff5e84; /* Blue */
+  background-color: #ff5e84;
+  box-shadow: 10px 15px 20px 0px #00000026;
+}
+
+.home-title {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 10px;
 }
 </style>
